@@ -37,5 +37,23 @@ public class TArbolBBTest extends TestCase {
         Assert.assertEquals(3, arbol.obtenerAltura());
     }
 
+    @Test
+    public void testTamanioArbolVacio() {
+        Assert.assertEquals(0, arbol.obtenerTamanio());
+    }
+
+    @Test
+    public void testObtenerTamanioConUnNodo() {
+        arbol.insertar(new TElementoAB<>(4,4));
+        Assert.assertEquals(1, arbol.obtenerTamanio());
+    }
+
+    @Test
+    public void testObtenerTamanioConMasDeUnNodo() {
+        for(int e : new int[]{1,2,3}){
+            arbol.insertar(new TElementoAB<>(e, e));
+        }
+        Assert.assertEquals(3, arbol.obtenerTamanio());
+    }
 
 }
