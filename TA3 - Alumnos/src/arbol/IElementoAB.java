@@ -45,7 +45,7 @@ public interface IElementoAB<T> {
      */
     TElementoAB<T> buscar(Comparable unaEtiqueta);
 
- 
+
 
     /**
      * Inserta un elemento dentro del arbol.
@@ -82,13 +82,38 @@ public interface IElementoAB<T> {
      * @return
      */
     T getDatos();
-	
-	 /**
+
+    /**
      * Elimina un elemento dada una etiqueta.
      * @param unaEtiqueta
-     * @return 
+     * @return
      */
-     TElementoAB eliminar(Comparable unaEtiqueta);
+    TElementoAB eliminar(Comparable unaEtiqueta);
 
     TElementoAB quitaElNodo();
+
+    /**
+     * Retorna la altura del arbol cuya raiz es la del nodo actual.
+     * @return Altura del subarbol.
+     */
+    public int obtenerAltura();
+
+    /**
+     * Retorna el tamaño del arbol cuya raiz es la del nodo actual.
+     * @return tamaño del subarbol.
+     */
+    public int obtenerTamanio();
+
+    /**
+     * Retorna el nivel del elemento cuya etiqueta es la pasada por par�metro.
+     * @param unaEtiqueta
+     * @return Nivel
+     */
+    public int obtenerNivel(Comparable unaEtiqueta);
+
+    /**
+     * Retorna la cantidad de hojas del arbol cuya raiz es la del nodo actual.
+     * @return Cantidad de hojas del subarbol.
+     */
+    public int obtenerCantidadHojas();
 }

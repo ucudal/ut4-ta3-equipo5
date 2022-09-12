@@ -172,4 +172,24 @@ public class TElementoAB<T> implements IElementoAB<T> {
         return elHijo;
 
     }
+
+    @Override
+    public int obtenerAltura() {
+        return 0;
+    }
+
+    @Override
+    public int obtenerTamanio() {
+        return 0;
+    }
+
+    @Override
+    public int obtenerNivel(Comparable unaEtiqueta) {
+        return 0;
+    }
+
+    @Override
+    public int obtenerCantidadHojas() {
+        return 0;
+    }
 }

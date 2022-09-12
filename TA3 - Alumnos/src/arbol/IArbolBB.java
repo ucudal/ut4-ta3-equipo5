@@ -12,7 +12,7 @@ public interface IArbolBB<T> {
 
     boolean insertar(TElementoAB<T> unElemento);
 
- 
+
 
     /**
      * Busca un elemento dentro del árbol.
@@ -45,14 +45,37 @@ public interface IArbolBB<T> {
      */
     String postOrden();
 
-   
-       /**
-     * Elimina un elemento dada una etiqueta.
-     * @param unaEtiqueta 
-     */
-       void eliminar(Comparable unaEtiqueta);
 
-	
-	
+    /**
+     * Elimina un elemento dada una etiqueta.
+     * @param unaEtiqueta
+     */
+    void eliminar(Comparable unaEtiqueta);
+
+    /**
+     * Retorna la altura del arbol.
+     * @return Altura del arbol.
+     */
+    public int obtenerAltura();
+
+    /**
+     * Retorna el tama�o del arbol.
+     * @return Tama�o del arbol.
+     */
+    public int obtenerTamanio();
+
+    /**
+     * Retorna el nivel del arbol a partir de la etiqueta indicada
+     * @param unaEtiqueta
+     * @return Nivel
+     */
+    public int obtenerNivel(Comparable unaEtiqueta);
+
+    /**
+     * Retorna la cantidad de hojas del arbol.
+     * @return Cantidad de hojas del arbol.
+     */
+    public int obtenerCantidadHojas();
+
 }
 
