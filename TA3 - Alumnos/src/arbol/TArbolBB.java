@@ -77,7 +77,7 @@ public class TArbolBB<T> implements IArbolBB<T> {
     @Override
     public int obtenerTamanio()
     {
-        return esVacio() ? -1 : raiz.obtenerTamanio();
+        return esVacio() ? 0 : raiz.obtenerTamanio();
     }
 
     @Override
