@@ -1,4 +1,4 @@
-
+import arbol.TArbolBB;
 
 public class Main {
 
@@ -6,7 +6,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        TArbolBB arbol = new TArbolBB();
+        TArbolBB<Integer> arbol = new TArbolBB<>();
 
         // cargar las claves del archivo "claves.txt"
 /*
