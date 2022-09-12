@@ -17,7 +17,6 @@ public interface IArbolBB<T> {
     /**
      * Busca un elemento dentro del árbol.
      *
-     *
      * @param unaEtiqueta Etiqueta identificadora del elemento a buscar.
      * .
      * @return Elemento encontrado. En caso de no encontrarlo, retorna nulo.
