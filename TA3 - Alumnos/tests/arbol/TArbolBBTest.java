@@ -38,8 +38,4 @@ public class TArbolBBTest extends TestCase {
     }
 
 
-    @Test
-    public void testObtenerTamanio() {
-
-    }
 }
