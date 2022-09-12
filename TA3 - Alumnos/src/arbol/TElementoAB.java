@@ -175,13 +175,32 @@ public class TElementoAB<T> implements IElementoAB<T> {
 
     @Override
     public int obtenerAltura() {
-        return 0;
+        int altIzq = -1;
+        int altDer = -1;
+        if (this.hijoIzq != null) {
+            altIzq = this.hijoIzq.obtenerAltura();
+        }
+
+        if (this.hijoDer != null) {
+            altDer = this.hijoDer.obtenerAltura();
+        }
+
+        return Math.max(altDer, altIzq) + 1;
     }
 
     @Override
     public int obtenerTamanio() {
-        return 0;
+        int tamSubArboles = 0;
+        if (this.hijoIzq != null) {
+            tamSubArboles += this.hijoIzq.obtenerTamanio();
+        }
+
+        if (this.hijoDer != null) {
+            tamSubArboles += this.hijoDer.obtenerTamanio();
+        }
+        return tamSubArboles + 1;
     }
+
 
     @Override
     public int obtenerNivel(Comparable unaEtiqueta) {

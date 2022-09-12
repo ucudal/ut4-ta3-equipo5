@@ -67,14 +67,17 @@ public class TArbolBB<T> implements IArbolBB<T> {
             this.raiz = this.raiz.eliminar(unaEtiqueta);
     }
 
+
     @Override
-    public int obtenerAltura() {
-        return 0;
+    public int obtenerAltura()
+    {
+        return esVacio() ? -1 : raiz.obtenerAltura();
     }
 
     @Override
-    public int obtenerTamanio() {
-        return 0;
+    public int obtenerTamanio()
+    {
+        return esVacio() ? -1 : raiz.obtenerTamanio();
     }
 
     @Override
