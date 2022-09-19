@@ -1,4 +1,5 @@
 import arbol.TArbolBB;
+import arbol.TElementoAB;
 
 public class Main {
 
@@ -8,19 +9,24 @@ public class Main {
     public static void main(String[] args) {
         TArbolBB<Integer> arbol = new TArbolBB<>();
 
-        // cargar las claves del archivo "claves.txt"
-/*
-      arbol.insertar(new TElementoAB(10, null));
-        arbol.insertar(new TElementoAB(1, null));
-        arbol.insertar(new TElementoAB(84, null));
-        arbol.insertar(new TElementoAB(20, null));
-        arbol.insertar(new TElementoAB(45, null));
-        arbol.insertar(new TElementoAB(23, null));
-        arbol.insertar(new TElementoAB(7, null));
-        arbol.insertar(new TElementoAB(100, null));
-*/
-  
-    
+        for(int e : new int[]{12, 25, 14, 1, 33, 88, 45, 2, 7, 66,5, 99}){
+            arbol.insertar(new TElementoAB<>(e, e));
+        }
+        System.out.println("Recorrido pre orden: "+arbol.preOrden());
+        System.out.println("Recorrido in orden: "+arbol.inOrden());
+        System.out.println("Recorrido post orden: "+arbol.postOrden());
+
+        System.out.println();
+
+        arbol.eliminar(99);
+        arbol.eliminar(2);
+        arbol.eliminar(12);
+        arbol.eliminar(33);
+
+        System.out.println("Recorrido pre orden: "+arbol.preOrden());
+        System.out.println("Recorrido in orden: "+arbol.inOrden());
+        System.out.println("Recorrido post orden: "+arbol.postOrden());
+
     }
 
 }
